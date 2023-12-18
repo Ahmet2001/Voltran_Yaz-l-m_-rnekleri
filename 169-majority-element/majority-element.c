@@ -1,17 +1,35 @@
-int majorityElement(int* nums, int numsSize){
-int key, j;
-    if (numsSize==1)
-      return nums[0];
-    for (int i = 1; i <= numsSize-1; i++)
-    {
-        key = nums[i];
-        j = i-1;
-               while(j>=0 && nums[j] > key){
-            nums[j+1] = nums[j];
-            j--;
+int majorityElement(int* nums, int numsSize) {
+    int x = 0;
+    int eb = nums[0];
+    for (int y = 1;y < numsSize;y++){
+        if (nums[y] > eb){
+            eb = nums[y];
         }
-        nums[j+1] = key;
+
+        
+
+
+
     }
-  
-    return nums[numsSize/2];
+        
+        for (int i = 0;i < eb + 1;i++){
+            x = 0;
+            for (int k = 0;k < numsSize;k++){
+                if (nums[numsSize - 1] == -1000000000){
+                    return -1000000000;
+                }
+
+                
+                if (i == nums[k]) {
+                    x++;
+                }
+                
+                }
+           if (x > numsSize/2) {
+                return i;
+               
+               }
+           
+            }
+            return 0;
 }
