@@ -15,8 +15,8 @@ int majorityElement(int* nums, int numsSize) {
         for (int i = 0;i < eb + 1;i++){
             x = 0;
             for (int k = 0;k < numsSize;k++){
-                if (nums[numsSize - 1] == -1000000000){
-                    return -1000000000;
+                if (nums[numsSize - 1] < 0){
+                    return nums[numsSize - 1];
                 }
 
                 
